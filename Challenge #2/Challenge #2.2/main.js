@@ -2,6 +2,8 @@ function removeDuplicates(arr) {
     return arr.reduce((unique, item) => {
         if (!unique.includes(item)) {
             unique.push(item);
+           // console.log (unique);
+           // console.log(item);
         }
         return unique;
     }, []);
