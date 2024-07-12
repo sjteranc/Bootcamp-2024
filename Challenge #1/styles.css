@@ -22,16 +22,14 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-align: left;
     border: 4px outset #ba9c68;
     padding: 10px;
 }
 
 .title h1 {  
     margin: 0 10px 0 0;
-    font-size: 28px;
+    font-size: 1.7rem;
     color: #ffffff;
-    font-weight: normal;
 }
 
 .title img {
@@ -48,7 +46,7 @@ body {
 }
 
 .space {
-    flex: 0.8;
+    
 }
 
 .star {
