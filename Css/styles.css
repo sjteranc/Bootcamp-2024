@@ -37,32 +37,34 @@ body {
     height: auto; 
     margin-left: auto;
 }
-.stars {
-    display: flex;
+.star {
+    display: flex; 
+    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    height: 30px;
-    margin-top: 5px;
 }
 
-
-
-.star {
-    width: 50%;
-    height: 90%;
-    background-image: url('images/starts.png');
-    background-repeat: repeat-x;
-    background-size: 14.28% 100%;
+.stars { 
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+.stars img {
+    
+    margin:1%;
+    width: 25px; 
+    height: auto;
+}
+
 
 .card {
     flex-direction: column;
     align-items: center;
 }
+	
 
-.card-image {
-    padding: 5px;
-}
 
 .card-image img {
     height: auto;
@@ -75,16 +77,14 @@ body {
     padding: 2px;
     background-color: #F2E1C2;
     border: 4px solid #80563E;
-    border-radius: 3px;
-}
 
 .type {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .description {
-    font-size: 15px;
+    font-size: 0.9rem;
     font-style: italic;
     color: #130d00;
 }
@@ -97,7 +97,7 @@ body {
 
 .points {
     border-top: 2px solid #000000;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: bold;
     color: #4d3300;
     text-align: right;
@@ -105,4 +105,4 @@ body {
 
 .points h2 {
     margin: 0;
-}
+}}
