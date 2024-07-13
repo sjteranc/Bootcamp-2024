@@ -1,6 +1,6 @@
 class Seat {
     constructor() {
-      this.status = 'Available'; // Available, Reserved
+      this.status = 'Available';
     }
   
     reserve() {
