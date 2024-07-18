@@ -7,22 +7,31 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="pokemon-figure">
-      <img id="pokemon-image" class="pokemon-image" src="" alt="Pokemon">
-    </div>
-    <div class="name-options">
-      <h1>Who's that Pokémon?</h1>
-      <button onclick="search()">Get Pokémon</button>
-      <div id="name-options-container">
-        <button class="name-option hide"></button>
-        <button class="name-option hide"></button>
-        <button class="name-option hide"></button>
-        <button class="name-option hide"></button>
+  <div class="container2">
+    <h1>Who's that Pokémon?</h1>
+    <div class="container">
+      <div class="pokemon-figure">
+        <img id="pokemon-image" class="pokemon-image hide" src="" alt="Pokemon">
       </div>
-      <div id="correct-message" class="message hide ">Correct!</div>
+      <div class="message-container">
+        <div class="name-options">
+          <!-- Changed this button to use the new class -->
+          <button class="get-pokemon" onclick="search()">Get Pokémon</button>
+          <div id="name-options-container">
+            <button class="name-option hide"></button>
+            <button class="name-option hide"></button>
+            <button class="name-option hide"></button>
+            <button class="name-option hide"></button>
+          </div>
+        </div>
+        <div id="correct-message" class="message hide">Correct!</div>
+        <div id="incorrect-message" class="message hide">Incorrect, it's <span id="correct-pokemon-name"></span>!</div>
+      </div>
     </div>
+    <div id="timer" class="timer hide">10</div>
   </div>
   <script src="script.js"></script>
+  <audio id="correctSound" src="sounds/ball.mp3"></audio>
+  <audio id="whosSound" src="sounds/whos.mp3"></audio>
 </body>
 </html>

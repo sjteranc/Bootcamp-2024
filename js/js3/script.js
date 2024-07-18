@@ -1,5 +1,6 @@
 const url = 'https://pokeapi.co/api/v2/pokemon';
 const totalPokemon = 898;
+let timer;
 
 async function handleFetch(url) {
   const response = await fetch(url);
@@ -49,30 +50,51 @@ function displayNameOptions(nameOptions, correctName) {
     button.classList.remove('hide');
     button.disabled = false;
   });
+
+  startTimer(correctName);
 }
 
 function checkAnswer(selectedName, correctName) {
   const pokemonImage = document.getElementById('pokemon-image');
   const correctMessage = document.getElementById('correct-message');
+  const incorrectMessage = document.getElementById('incorrect-message');
+  const correctPokemonName = document.getElementById('correct-pokemon-name');
   const nameButtons = document.querySelectorAll('.name-option');
+
+  clearInterval(timer);
 
   if (selectedName === correctName) {
     pokemonImage.style.filter = 'brightness(100%)';
     correctMessage.classList.remove('hide');
+    playCorrectSound(); // Play the sound when correct
     setTimeout(() => {
-      correctMessage.classList.add('hide'); 
+      correctMessage.classList.add('hide');
     }, 3000);
-    nameButtons.forEach(button => {
-      button.classList.add('hide');
-    });
   } else {
-    alert('Incorrect! Try again.');
+    pokemonImage.style.filter = 'brightness(100%)';
+    correctPokemonName.textContent = correctName;
+    incorrectMessage.classList.remove('hide');
+    setTimeout(() => {
+      incorrectMessage.classList.add('hide');
+    }, 3000);
   }
+
+  nameButtons.forEach(button => {
+    button.classList.add('hide');
+  });
 }
 
 function search() {
   const randomId = Math.floor(Math.random() * totalPokemon) + 1;
   const pokemonImage = document.getElementById('pokemon-image');
+  const timerElement = document.getElementById('timer');
+
+  timerElement.classList.add('hide');
+  clearInterval(timer);
+  
+  pokemonImage.classList.add('hide');
+
+  playWhosSound(); 
 
   getPokemon(randomId).then(data => {
     if (data) {
@@ -81,7 +103,38 @@ function search() {
       pokemonImage.style.filter = 'brightness(0%)';
       generateNameOptions(data.name).then(nameOptions => {
         displayNameOptions(nameOptions, data.name);
+        
+        pokemonImage.classList.remove('hide'); 
       });
     }
   });
+}
+
+function startTimer(correctName) {
+  let timeLeft = 10;
+  const timerElement = document.getElementById('timer');
+  timerElement.textContent = timeLeft;
+  timerElement.classList.remove('hide');
+
+  timer = setInterval(() => {
+    timeLeft -= 1;
+    timerElement.textContent = timeLeft;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      checkAnswer(null, correctName); 
+    }
+  }, 1000);
+}
+
+function playCorrectSound() {
+  const audio = document.getElementById('correctSound');
+  audio.volume = 0.05; 
+  audio.play();
+}
+
+function playWhosSound() {
+  const audio = document.getElementById('whosSound');
+  audio.volume = 0.05; 
+  audio.play();
 }
