@@ -58,10 +58,10 @@ function checkAnswer(selectedName, correctName) {
 
   if (selectedName === correctName) {
     pokemonImage.style.filter = 'brightness(100%)';
-    correctMessage.classList.remove('hide'); // Asegura que se muestre el mensaje de "Correcto!"
+    correctMessage.classList.remove('hide');
     setTimeout(() => {
-      correctMessage.classList.add('hide'); // Oculta el mensaje de "Correcto!" después de 2 segundos
-    }, 1);
+      correctMessage.classList.add('hide'); 
+    }, 3000);
     nameButtons.forEach(button => {
       button.classList.add('hide');
     });

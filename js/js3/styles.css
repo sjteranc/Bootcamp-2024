@@ -52,9 +52,8 @@ button {
   cursor: pointer;
 }
 
-.message {
-  background-color: #4CAF50;
-  color: white;
+.message hide {
+  font-size: 5rem;
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
