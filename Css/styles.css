@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    position: relative;
+}
+.container div{
+    backface-visibility: hidden;
+    transition: 1s;
+  
+}
+
+.front{
+    background-color: #AE8146;
+    border: 5px solid #3a4141;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: perspective(500px) rotateY(0deg);
+    
+   
+}
+.container:hover .front{
+    transform: perspective(500px) rotateY(180deg);
+  
+}
+
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 4px outset #ba9c68;
+    padding: 10px;
+}
+
+.title h1 {  
+    margin: 0 10px 0 0;
+    font-size: 1.7rem;
+    color: #ffffff;
+}
+
+.title img {
+    width: 30px; 
+    height: auto; 
+    margin-left: auto;
+}
+.star {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.stars { 
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.stars img {
+    
+    margin:1%;
+    width: 25px; 
+    height: auto;
+}
+
+
+.card {
+    flex-direction: column;
+    align-items: center;
+    
+}
+	
+
+
+.card-image img {
+    height: auto;
+    border: 10px outset #5a6161;
+    margin-right: 10px;
+}
+
+.card-description {
+    display:flex;
+    flex-direction: column;
+    padding: 2px;
+    background-color: #F2E1C2;
+    border: 4px solid #80563E;
+
+.type {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #130d00;
+}
+
+.description p {
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 15%;
+}
+
+.points {
+    border-top: 2px solid #000000;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4d3300;
+    text-align: right;
+}
+
+.points h2 {
+    margin: 0;
+}}
+
+.containerB {
+    position: absolute;
+    background-color: #000000;
+    transform: perspective(500px) rotateY(180deg);
+    background-color: #733526; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #b5895a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+    height: 90%;
+    width: 85%;
+   
+}
+
+
+.container:hover .containerB{
+    transform: perspective(500px) rotateY(360deg);
+  
+}
+
+.circle {
+    background-color: #1b1b1b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:0.5;
+    aspect-ratio: 0.5;
+   
+}
