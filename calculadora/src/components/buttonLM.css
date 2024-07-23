@@ -1,0 +1,63 @@
+body {
+  background-color: #f0f0f0;
+}
+
+.calculator-container {
+  background-color: #ffffff;
+}
+
+.calculator-title {
+  color: #333;
+}
+
+.result-display {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.calculator-input {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:nth-child(1), button:nth-child(2), button:nth-child(3), button:nth-child(4) {
+  background-color: #ff9800;
+}
+
+button:nth-child(1):hover, button:nth-child(2):hover, button:nth-child(3):hover, button:nth-child(4):hover {
+  background-color: #f57c00;
+}
+
+button:nth-child(5) {
+  background-color: #2196F3;
+}
+
+button:nth-child(5):hover {
+  background-color: #1976D2;
+}
+
+button:nth-child(6) {
+  background-color: #f44336;
+}
+
+button:nth-child(6):hover {
+  background-color: #d32f2f;
+}
+
+.toggle-mode {
+  background-color: #607d8b;
+}
+
+.toggle-mode:hover {
+  background-color: #455a64;
+}
