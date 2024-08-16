@@ -1,13 +1,12 @@
-import './App.css'
-import Checkout from './Checkout'
-
+import './App.css';
+import Checkout from './Checkout';
 
 function App() {
   return (
     <div className="App">
-      <Checkout />
+      <Checkout/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
